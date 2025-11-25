@@ -257,7 +257,7 @@ https://www.notion.so/ohgiraffers/WBS-2aa649136c11808d9cb0d22c4d009863
 | T-0001 | 환경 및 설치 | 가상환경 설정 | 가상환경이 정상적으로 생성되고 pip list에서 필요한 패키지가 충돌 없이 설치 |
 | T-0002 | 데이터 로더 테스트 | JSON 로드 후 반환된 Document의 metadata 필드 확인  | Document 객체가 정상적으로 생성되며 metadata에 university, college, department, subject, year_semester, description 등이 올바르게 포함 |
 | T-0003 | 임베딩/벡터스토어 테스트 | Chroma DB 생성 | Chroma DB 폴더가 정상 생성되며 Embedding 저장 및 검색이 오류 없이 수행 |
-| T-0004 | Retriever 테스트 |  |  |
+| T-0004 | Retriever 테스트 | tools.py의 도구 호출 테스트 | langsmith의 agent-tool 호출 여부를 판단하여 올바른 tool을 호출하는지 테스트 |
 | T-0005 |  RAG 파이프라인 테스트 | agent→tools 순환 동작(간단한 tool call) 확인 | Agent가 올바르게 tool을 호출하고 tool 응답을 기반으로 최종 답변을 생성 |
 | T-0006 | 프론트엔드 테스트 | 질문 입력 → 응답 반환 및 대화 기록 유지 확인 | 입력한 질문에 대해 응답이 UI에 정상 표시되고 이전 대화 내역이 유지 |
 | T-0007 | 성능/비기능 | LLM 응답 시간 측정 | 20초 이내 응답이 반환 |
