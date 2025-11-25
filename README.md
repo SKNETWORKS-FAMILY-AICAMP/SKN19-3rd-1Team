@@ -143,10 +143,10 @@ project name/
 - ✅Core Logic: LLM의 추론과 도구(Tool) 실행의 순환 구조
 - ✅Data Layer: ChromaDB 기반의 벡터 검색(RAG) 시스템
 
-![전공 탐색 멘토 챗봇 시스템 아키텍처 (1)](https://github.com/user-attachments/assets/d0ee610a-48e1-4974-99a2-b0b36d4fcbd6)
-<img width="1280" height="720" alt="전공 탐색 멘토 챗봇 시스템 아키텍처" src="https://github.com/user-attachments/assets/9e95351b-67fc-48e7-8b0b-ca8b18fa1183" />
-![전공 탐색 멘토 챗봇 시스템 아키텍처](https://github.com/user-attachments/assets/fa8ceda5-3d0d-41ef-9b01-6d6c954e85d9)
-
+![ (1)]()
+<img width="1000" height="650" alt="전공 탐색 멘토 챗봇 시스템 아키텍처" src="https://github.com/user-attachments/assets/d0ee610a-48e1-4974-99a2-b0b36d4fcbd6" />
+<img width="1000" height="650" alt="전공 탐색 멘토 챗봇 시스템 아키텍처" src="https://github.com/user-attachments/assets/9e95351b-67fc-48e7-8b0b-ca8b18fa1183" />
+<img width="1000" height="650" alt="전공 탐색 멘토 챗봇 시스템 아키텍처" src="https://github.com/user-attachments/assets/fa8ceda5-3d0d-41ef-9b01-6d6c954e85d9" />
 
 
 <div align="center">
@@ -167,6 +167,7 @@ project name/
 ## 5. WBS (Work Breakdown Structure)
 
 https://www.notion.so/ohgiraffers/WBS-2aa649136c11808d9cb0d22c4d009863
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/617066c1-b747-49df-a912-1e8e727eeadd" />
 
 ---
 
@@ -284,7 +285,7 @@ https://www.notion.so/ohgiraffers/WBS-2aa649136c11808d9cb0d22c4d009863
 - **문제점**: 간헐적으로 LLM에게 학과 정보를 프롬프트로 제공하면 학과 명을 임의로 변경함.
 - **개선 방법**: LLM이 복사하기 쉬운 형태로 포매팅 및 System prompt에 학과명 사용 규칙 명시하여 개선했으나 아직 문제점 존재
 
-### 개선할 사항 3
+### 개선할 사항 4
 - **문제점**: PDF 문서를 크롤링하는 과정에서 빠진 문장이 존재함. 
 - **개선 방법**: 다른 크롤링 방식 시도 중
 
