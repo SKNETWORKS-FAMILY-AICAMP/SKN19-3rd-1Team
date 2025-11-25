@@ -216,6 +216,11 @@ https://www.notion.so/ohgiraffers/WBS-2aa649136c11808d9cb0d22c4d009863
 ## 8. DB 연동 구현 코드
 
 
+
+<div align="center">
+<img width="600" height="267" alt="DB_struct" src="https://github.com/user-attachments/assets/875e9807-d574-43e1-861e-82f957b1ca8a" />
+</div>
+
 ---
 
 ## 9. 테스트 계획 및 결과 보고서
