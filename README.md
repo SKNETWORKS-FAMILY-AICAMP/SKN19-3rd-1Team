@@ -94,9 +94,6 @@ LLM
 
  <p> <img src="https://img.shields.io/badge/OpenAI-gpt--4o--mini-0A84FF?logo=openai&logoColor=white" /> <img src="https://img.shields.io/badge/Tool%20Calling-Strong%20Support-brightgreen" /> <img src="https://img.shields.io/badge/Korean%20QA-Excellent-blue" /> </p> 
 
-    - Tool Calling 안정성 우수
-    - 한국어 질의 대응 우수
-
 
 
 ---
@@ -169,13 +166,13 @@ https://www.notion.so/ohgiraffers/WBS-2aa649136c11808d9cb0d22c4d009863
     - 각 대학 학과별 커리큘럼 사이트
     - 각 대학 강의계획서 사이트
     - 공공데이터포털 https://www.data.go.kr/data/15112124/fileData.do#/tab-layer-file
-- **데이터 규모**: [데이터 양]
+- **데이터 규모**: 16개 대학의 전공, 수업 데이터 
 - **수집 기간**: 2025-11-16 ~ 2025-11-23
 
 ### 데이터 전처리
-1. **전처리 단계 1**: JSON 스키마 매핑
-2. **전처리 단계 2**: [설명]
-3. **전처리 단계 3**: [설명]
+1. **유형1**: 수강신청 페이지 유형별(팝업창/새로운 탭/PDF 뷰어/html) 적절한 방법으로 크롤링
+2. **유형2**: PDF 다운로드 후 문서 OCR, 이후 잘못 기입된 newline 및 특수문자 제거
+3. **유형3**: 오픈 CSV 데이터셋을 대학/학과/전공별로 JSON 변환, 이후 컬럼명 체크 
 
 ### Json 예시
 ```
