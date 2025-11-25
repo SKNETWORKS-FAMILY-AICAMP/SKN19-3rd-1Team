@@ -36,36 +36,7 @@
       </a>
     </td> 
     <td align="center"> 
-      <img src="https://avatars.githubusercontent.com/u/181833818?v=4" width="100px;" alt="Hawon Oh"/>  
-      <br/> 
-      오하원
-      <br/>
-      <a href="https://github.com/Hawon-Oh">
-        <img src="https://img.shields.io/badge/GitHub-Hawon--Oh-181717?style=flat&logo=github&logoColor=white">
-      </a>
-    </td> 
-  </tr>
-</table>
-</div>
-
----
-
-## 2. 프로젝트 개요
-
-### 프로젝트 명
-> 공부의 신2 - 대학 학과 탐색 서비스
-
-### 프로젝트 소개
-공부의 신2는 선호도/대학 전공/과목 설명을 기반으로 학생에게 적합한 학과와 커리큘럼을 제공하는 AI 서비스입니다.
-대학별 전공 과목 데이터를 수집하여 벡터화하고 RAG(Retrieval-Augmented Generation) 구조로 구축했고, LLM의 추론 흐름을 통제하기 위해 LangGraph 기반 ReAct Agent + Structured Pipeline을 결합했습니다. 
-
-
-### 프로젝트 필요성(배경)
-* 정보 파편화
-* 융합·신설 학과 증가 
-* 정보 비대칭
-
-대부분의 진로 관련 정보는 대학 소개 중심으로 제공되며 학과에서 실제로 무엇을 배우는지 졸업 후 어떤 직무로 이어지는지에 대한 정보는 인터넷에 흩어져 있는 경우가 많아 필요한 정보를 한 번에 찾기 어렵다.  특히 최근 대학들이 다양한 융합·신설 학과를 만들면서 학과명만으로는 실제 커리큘럼이나 진로를 추론하기 점점 어려워지고 있다. 실제로 학생들이 에브리타임 같은 대학교 커뮤니티에 들어가 학과에 대한 질문을 반복적으로 질문하는 경우를 볼 수 있다. 이러한 정보 비대칭으로 인해 많은 학생들이 전공에서 실제로 배우는 내용을 입학 후에야 파악하게 되고 전공 적합성을 뒤늦게 판단하여 쉽게 흥미를 잃는 문제가 발생하고 있다.
+      <img src="https://a니다.
 
 
 ### 프로젝트 목표
