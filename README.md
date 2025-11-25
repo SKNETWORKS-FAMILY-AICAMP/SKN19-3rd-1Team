@@ -94,7 +94,38 @@ LLM
 
  <p> <img src="https://img.shields.io/badge/OpenAI-gpt--4o--mini-0A84FF?logo=openai&logoColor=white" /> <img src="https://img.shields.io/badge/Tool%20Calling-Strong%20Support-brightgreen" /> <img src="https://img.shields.io/badge/Korean%20QA-Excellent-blue" /> </p> 
 
+### 깃 구조
+```
+project name/
+│
+├── README.md
+├── .gitignore
+├── .env
+├── requirements.txt
+│
+├── data/                    # 원천데이터 (강의계획서, 학과정보 등)
+│   ├── raw/                 # 원본 그대로
+│   │   └──seoul_syllabus.json
+│   └── processed/           # 전처리 후 데이터
+│
+├── scripts/                 # 데이터 수집
+│   ├── crawling/ 
+│   │   └──seoul_major_crawler.py
+│   └── preprocessing/
+│ 
+├── backend/
+│   ├── rag/
+│   │   ├── retriever/
+│   │   ├── embedder/
+│   │   └── llm/
+│   └── vectorDB/
+│
+├── frontend/
+│
+└── docs/                    # 기획 문서
+      └── schema.md          # JSON 구조 정의
 
+```
 
 ---
 
@@ -212,8 +243,6 @@ https://www.notion.so/ohgiraffers/WBS-2aa649136c11808d9cb0d22c4d009863
 
 ## 8. DB 연동 구현 코드
 
-
-
 <div align="center">
 <img width="600" height="267" alt="DB_struct" src="https://github.com/user-attachments/assets/875e9807-d574-43e1-861e-82f957b1ca8a" />
 </div>
@@ -225,15 +254,19 @@ https://www.notion.so/ohgiraffers/WBS-2aa649136c11808d9cb0d22c4d009863
 ### 테스트 계획
 | 테스트 ID | 테스트 항목 | 테스트 방법 | 예상 결과 |
 |-----------|------------|------------|----------|
-| T-0001 | Rag | [방법] | [결과] |
-| T-0002 | [항목] | [방법] | [결과] |
+| T-0001 | 환경 및 설치 | 가상환경 설정 | [결과] |
+| T-0002 | 데이터 로더 테스트 | JSON 로드 후 반환된 Document의 metadata 필드 확인  | [결과] |
+| T-0003 | 임베딩/벡터스토어 테스트 | Chroma DB 생성 | [결과] |
+| T-0004 | Retriever 테스트 |  폴백 경로(전공명 필 등) 동작 확인 | [결과] |
+| T-0005 |  RAG 파이프라인 테스트 | agent→tools 순환 동작(간단한 tool call) 확인 | [결과] |
+| T-0006 | 프론트엔드 테스트 | 질문 입력 → 응답 반환 및 대화 기록 유지 확 | [결과] |
+| T-0007 | 성능/비기능 | LLM 응답 시간 측정 | [결과] |
 
 ### 테스트 결과
 | 테스트 ID | 실행일 | 결과 | 비고 |
 |-----------|--------|------|------|
 | T-0001 | YYYY-MM-DD | SUCCESS | [비고] |
 | T-0002 | YYYY-MM-DD | ✅/❌ | [비고] |
-
 
 ---
 
@@ -262,17 +295,28 @@ https://www.notion.so/ohgiraffers/WBS-2aa649136c11808d9cb0d22c4d009863
 ## 11. 수행결과 (테스트/시연 페이지)
 
 ### 주요 기능 시연
-#### 기능 1
-![기능1 스크린샷](./images/feature1.png)
-[기능 설명]
+#### 기능 1. 사용자 관심사 선택
+- 대분류: 공학/자연과학
+- 소분류: 컴공, 산공
 
-#### 기능 2
-![기능2 스크린샷](./images/feature2.png)
-[기능 설명]
+#### 기능 2. 관심사 기반 학과 추천
+"내 관심사 기반 학과 추천해줘"
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/d40da642-d37e-429e-aa45-458fc50ef639" />
 
-#### 기능 3
-![기능3 스크린샷](./images/feature3.png)
-[기능 설명]
+#### 기능 3.  관심 학과 개설 대학 추천
+"컴퓨터 관련 학과가 있는 대학을 찾아줘"
+- '컴퓨터, 소프트웨어, 인공지능' 중에서 유사도 기반으로 높은 과를 가져옴
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/f04b1822-ca88-4971-9ab0-72ad0af546d4" />
+
+#### 기능 4. 관심 학교의 학과 커리큘럼 제공
+"서울대학교 컴퓨터공학부 커리큘럼 제공해줘."
+- 한 학기마다 최대 다섯개의 과목을 가져와서 커리큘럼을 제공
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/ee95524b-658b-43a5-89e4-a5b83f0cbbe9" />
+
+#### 기능 5. 개요 세부 제공
+"임베디드시스템과 응용 과목의 자세한 설명을 가져와줘."
+- 해당 과목의 개요를 그대로 가져옴
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/4f229f91-6ec3-447d-8f73-55f8b6a58d00" />
 
 ---
 
