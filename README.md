@@ -56,8 +56,8 @@
 > 공부의 신2 - 대학 학과 탐색 서비스
 
 ### 프로젝트 소개
-공부의 신2는 선호도/대학 전공/과목 설명을 기반으로 학생에게 적합한 학과와 커리큘럼을 제공하는 AI 서비스입니다.
-대학별 전공 과목 데이터를 수집하여 벡터화하고 RAG(Retrieval-Augmented Generation) 구조로 구축했고, LLM의 추론 흐름을 통제하기 위해 LangGraph 기반 ReAct Agent + Structured Pipeline을 결합했습니다. 
+공부의 신2는 선호도/대학 전공/과목 설명을 기반으로 학생에게 적합한 학과와 커리큘럼을 제공하는 AI 서비스이다.
+대학별 전공 과목 데이터를 수집하여 벡터화하고 RAG(Retrieval-Augmented Generation) 구조로 구축했고, LLM의 추론 흐름을 통제하기 위해 LangGraph 기반 ReAct Agent + Structured Pipeline을 결합했다. 
 
 
 ### 프로젝트 필요성(배경)
@@ -136,7 +136,7 @@ project name/
 
 </div>
 
-본 시스템은 4단계 계층 구조로 설계되어 있으며 확장성과 유연성을 갖춘 AI 아키텍처입니다.
+본 시스템은 4단계 계층 구조로 설계되어 있으며 확장성과 유연성을 갖춘 AI 아키텍처이다.
 
 - ✅Frontend: Streamlit 기반의 대화형 사용자 인터페이스
 - ✅Backend: LangGraph를 활용한 에이전트 오케스트레이션
