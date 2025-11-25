@@ -1,5 +1,3 @@
-### SKN19-3rd-1Team
-
 # SK네트웍스 Family AI 캠프 19기 3차 프로젝트
 
 ## 1. 공신2 팀 소개
@@ -142,11 +140,6 @@ project name/
 - ✅Backend: LangGraph를 활용한 에이전트 오케스트레이션
 - ✅Core Logic: LLM의 추론과 도구(Tool) 실행의 순환 구조
 - ✅Data Layer: ChromaDB 기반의 벡터 검색(RAG) 시스템
-
-![ (1)]()
-<img width="1000" height="650" alt="전공 탐색 멘토 챗봇 시스템 아키텍처" src="https://github.com/user-attachments/assets/d0ee610a-48e1-4974-99a2-b0b36d4fcbd6" />
-<img width="1000" height="650" alt="전공 탐색 멘토 챗봇 시스템 아키텍처" src="https://github.com/user-attachments/assets/9e95351b-67fc-48e7-8b0b-ca8b18fa1183" />
-<img width="1000" height="650" alt="전공 탐색 멘토 챗봇 시스템 아키텍처" src="https://github.com/user-attachments/assets/fa8ceda5-3d0d-41ef-9b01-6d6c954e85d9" />
 
 
 <div align="center">
@@ -324,6 +317,45 @@ https://www.notion.so/ohgiraffers/WBS-2aa649136c11808d9cb0d22c4d009863
 | 이름 | 회고 |
 |------|------|
 | 강지완 | 처음으로 RAG 시스템을 구현해 보면서 많은 어려움을 느꼈다. 데이터 수집 과정에서는 여러 사이트에 흩어져있는 대학 데이터들을 같은 양식으로 전처리 하는 과정이 매우 까다로웠다. 또한, langgraph를 활용하여 agent기반 rag 시스템을 구현했지만, 지금과 같은 싱글 에이전트의 경우는 langchain으로도 구현할 수 있다고 하여 이 방법으로 구현해 보는 것도 괜찮을 것 같다. 혹은, 멀티 에이전트 기반 시스템을 활용하여 지금의 개선점들을 개선할 수 있다면, 이 방법을 시도해 보는 것도 괜찮을 것 같다. 특히, LLM의 입,출력 컨택스트값을 조정하는 방법을 찾아보고 적용하여 7b정도의 작은 모델에서도 해당 프로젝트가 정상적으로 수행이 되도록 개선해봐야겠다. |
-| 김진 | 각기 다른 형식의 데이터를 수집하는 과정에서 많은 시간이 소요되었다. 특히 수강신청 페이지나 단과대학별 사이트를 일일이 방문하여 원하는 데이터를 찾아 크롤링을 해야하는 어려움이 있었다. 초기에는  sLLM을 활용해 자동화와 대화 유지 기능을 시도했지만 이전 대화 맥락을 유지하는 것이 쉽지 않아 결국 LLM으로 변경하게 되었다. LangGraph을 처음 사용해봤는데 생각보다 편하게 사용할 수 있었던 것 같다. 현재 시스템은 기본 기능은 구현되었지만 4차 발표 전까지 안정성과 정확성을 높이기 위해 추가적인 보완과 최적화가 필요하다고 느꼈다. |
+| 김진 | 각기 다른 형식의 데이터를 수집하는 과정에서 많은 시간이 소요되었다. 특히 수강신청 페이지나 단과대학별 사이트를 일일이 방문하여 원하는 데이터를 찾아 크롤링을 해야하는 어려움이 있었다. 초기에는  sLLM을 활용해 자동화와 대화 유지 기능을 시도했지만 이전 대화 맥락을 유지하는 것이 쉽지 않아 결국 LLM으로 변경하게 되었다. 현재 시스템은 기본 기능은 구현되었지만 4차 발표 전까지 안정성과 정확성을 높이기 위해 추가적인 보완과 최적화가 필요하다고 느꼈다. |
 | 마한성 | 데이터 수집에서부터 어려움을 겪었다. 학교/학과마다 pdf, 수강신청페이지, 홈페이지, 팝업창 등  양식이 다양하고 봇을 막아둔 사이트들도 있어서 데이터 수집에 시간을 많이 사용했다. 더군다나 정확하지 않은 데이터들이 섞여있다보니 결과를 검증하는 과정에서 데이터를 다시 파악하는데도 시간을 꽤나 소비했다.  이후 LangGraph와 LangChain을 활용하는 과정에서는 개념적으로는 알고 있지만 코드로 구성하려니 구조를 파악하는 것부터 어려움을 겪었다. 또한 학과명을 인식하는 과정에서 기존의 매핑 방식으로는 한계를 느껴서 유사도 기반으로 매칭하는 툴을 추가하였다. |
 | 오하원 | 각 대학마다 다른 방법으로 데이터 크롤링해야 했다. 다양한 시도와 실패들을 해볼 수 있어서 유익했고 한가지의 솔루션으로 모두 대응 가능한 방법에 대해 계속 고민했다. React으로 프론트엔드를 여러 번 만들어보긴 했지만 이번에 새로운 시도들을 해보면서 챗봇을 좀 더 다양한 방식으로 개발할 수 있음을 느꼈다. html, css, js로 만들면 오래걸렸을 부분조차 React으로 손쉽게 구현할 수 있던 점에서 개발의 희열감을 느꼈다. |
+
+---
+
+### 13. 테스트 케이스
+1. 학과 정보 검색 → matchdepartmentname, retrieve_courses 사용
+<img width="989" height="821" alt="image" src="https://github.com/user-attachments/assets/9c699603-ab51-479b-8707-9d3d70008608" />
+
+2. recommend_curriculum 도입
+- 질문: "홍대 컴공 커리큘럼 알려줘" + 버튼(상세, 요약, 표)
+- 예상 답변: 각 학기마다 최대 다섯개의 과목(과목명, 과목유형, 과목설명) 출력하는 recommend_curriculum툴을 사용해 선택한 출력 유형 버튼에 맞게 커리큘럼을 출력
+- 실제 답변: recommend_curriculum을 통해 커리큘럼을 출력.
+<img width="963" height="735" alt="image" src="https://github.com/user-attachments/assets/908c7506-c387-425a-bf85-22debda57c29" />
+
+3. retrieve_courses
+- 질문: "데이터 분석 관련 과목 추천해줘."
+- 실제 답변: retrieve_courses를 통해 답변 출력
+<img width="952" height="726" alt="image" src="https://github.com/user-attachments/assets/36818580-4ca1-41b9-bb05-750ac92218c3" />
+
+4. 부정확한 입력 → 입력 변환 → tool calling process 점검
+- 부정확한 입력
+- 질문: 홍댜 컴공ㅇ과 커리줘
+<img width="977" height="685" alt="image" src="https://github.com/user-attachments/assets/94eb19cd-b3d0-47f9-87fe-ba82507ad7ee" />
+
+5. HuggingFace inference API token 부족 → OpenAI 모델 사용
+- Ollama를 활용하여 local model 사용 → cpu 기반이라 느리다...
+- Runpod를 활용하여 Ollama 모델 사용
+    - → Ollama runpod환경에서 git clone 시 PAT 키 오류 발생
+    - → 매 pod 마다 git clone 필요
+<img width="1910" height="1348" alt="image" src="https://github.com/user-attachments/assets/0d38cdef-bd5d-421b-aa76-de80fdec21f7" />
+
+6. 학과 매핑 검색 기능 오류 : 전체 json 파일 서치로 인한 timeout (over 300s)
+- caching을 활용하여 해결
+```
+# 학과 임베딩 캐싱 함수
+_DEPT_EMBEDDINGS_CACHE = None
+_DEPT_NAMES_CACHE = None
+```
+<img width="1900" height="1198" alt="image" src="https://github.com/user-attachments/assets/756d0b62-04b1-4836-9189-214547c2b210" />
+<img width="1007" height="742" alt="image" src="https://github.com/user-attachments/assets/2b203193-3288-497b-8c20-7c990affdb6b" />
