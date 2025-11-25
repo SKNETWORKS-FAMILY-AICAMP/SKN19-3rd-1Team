@@ -1,0 +1,10 @@
+# Key
+.env
+
+# pycache
+__pycache__
+
+# data
+backend/data/chroma_db
+backend/data/
+data/raw/
